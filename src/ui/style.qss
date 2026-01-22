@@ -1,0 +1,136 @@
+/* === TŁO APLIKACJI === */
+QWidget#main_bg {
+    background-color: #000000;
+}
+
+/* === SIDEBAR (LEWY PANEL) === */
+QFrame#sidebar {
+    background-color: #0a0a0a;
+    border-right: 1px solid #1a1a1a;
+}
+
+/* === TABELA (LISTA FILMÓW) === */
+QTableWidget {
+    background-color: transparent;
+    border: none;
+    color: #999999;
+    font-size: 16px;
+    outline: none;
+    padding: 0px;
+    selection-background-color: transparent; 
+    selection-color: transparent;
+}
+
+/* Pojedynczy wiersz */
+QTableWidget::item {
+    padding: 15px 10px;
+    border-bottom: 1px solid #141414;
+    margin-bottom: 0px;
+}
+
+/* === ZAZNACZENIE === */
+QTableWidget::item:selected {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    border-left: 4px solid #E50914; /* Czerwony pasek zamiast cienia */
+}
+
+QTableWidget:focus {
+    border: none;
+    outline: none;
+}
+
+/* === NAGŁÓWEK TABELI === */
+QHeaderView::section {
+    background-color: #0a0a0a;
+    color: #555555;
+    border: none;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px;
+    border-bottom: 2px solid #1a1a1a;
+}
+
+/* === PRAWA STRONA (HERO) === */
+QLabel#hero_title {
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+QLabel#hero_details {
+    color: #E50914;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+QLabel#hero_poster {
+    border-radius: 8px;
+    border: 1px solid #333;
+    background-color: #050505;
+}
+
+QTextEdit#hero_overview {
+    color: #cccccc;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: transparent;
+    border: none;
+    padding: 10px 0px;
+}
+
+/* === PRZYCISKI === */
+QPushButton {
+    background-color: #1a1a1a;
+    color: #dddddd;
+    border: 1px solid #333333;
+    border-radius: 20px;
+    padding: 12px;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 15px;
+    /* Usunięto 'cursor: pointer' - to jest ustawione w Pythonie */
+}
+
+QPushButton:hover {
+    background-color: #333333;
+    color: white;
+    border-color: #555555;
+}
+
+/* Przycisk ODTWÓRZ - Czerwony */
+QPushButton#play_btn {
+    background-color: #E50914;
+    border: 1px solid #E50914; /* Dodajemy ramkę w kolorze tła */
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+QPushButton#play_btn:hover {
+    background-color: #ff1f2f;
+    border: 1px solid #ff5f6f; /* Jasna ramka zamiast box-shadow (symuluje glow) */
+}
+
+/* === SCROLLBAR === */
+QScrollBar:vertical {
+    background: transparent;
+    width: 6px;
+    margin: 0px;
+}
+QScrollBar::handle:vertical {
+    background: #333333;
+    border-radius: 3px;
+    min-height: 40px;
+}
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
