@@ -1,0 +1,8 @@
+PyQt6
+pymongo
+python-vlc
+requests
+python-dotenv
+pytest
+mongomock
+pytest-qt
