@@ -1,3 +1,4 @@
 .env
 .venv
 reset_db.py
+__pycache__
