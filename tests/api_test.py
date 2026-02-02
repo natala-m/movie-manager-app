@@ -4,7 +4,6 @@ from pathlib import Path
 from dotenv import load_dotenv
 import pprint  # Do czytelnego wyświetlania struktur danych
 
-# --- KONFIGURACJA ŚRODOWISKA ---
 # Ustalanie ścieżki do katalogu głównego projektu, aby Python widział folder 'src'
 current_file = Path(__file__).resolve()
 project_root = current_file.parent.parent

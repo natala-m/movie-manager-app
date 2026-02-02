@@ -17,7 +17,7 @@ class MovieLibrary(QMainWindow):
         self.init_ui()
 
     def init_ui(self):
-        self.setWindowTitle("Cinema Manager")
+        self.setWindowTitle("Biblioteka filmów")
         self.resize(1200, 800)
         
         central = QWidget()
@@ -55,9 +55,9 @@ class MovieLibrary(QMainWindow):
         left_layout.addWidget(self.table)
         
         btn_layout = QHBoxLayout()
-        self.btn_scan = QPushButton("Skanuj")
+        self.btn_scan = QPushButton("Scan")
         self.btn_scan.clicked.connect(self.scan)
-        self.btn_play = QPushButton("Odtwórz")
+        self.btn_play = QPushButton("Play")
         self.btn_play.setObjectName("play_btn")
         self.btn_play.clicked.connect(self.play)
         
@@ -172,7 +172,7 @@ class MovieLibrary(QMainWindow):
         file_path = self.table.item(row, 2).text()
         
         tmdb_id, ok = QInputDialog.getText(self, "Napraw", 
-            "Podaj ID.\nJesli to serial, a nie dziala, wpisz 'tv:ID'")
+            "Podaj ID")
         
         if ok and tmdb_id:
             QApplication.setOverrideCursor(Qt.CursorShape.WaitCursor)

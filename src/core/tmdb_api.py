@@ -91,7 +91,7 @@ class TMDBClient:
             print(f"Błąd Specific {endpoint}: {e}")
             return None
 
-    # === SMART GET BY ID (POPRAWIONE) ===
+    # get by id na filmy i seriale
     def get_smart_by_id(self, tmdb_input, prefer_tv=False):
         """
         tmdb_input: może być '123' albo 'tv:123'
